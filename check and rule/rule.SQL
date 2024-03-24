@@ -1,0 +1,4 @@
+CREATE OR REPLACE RULE check_transaction_date AS
+ON INSERT TO transaction
+WHERE NEW.date_t > CURRENT_DATE
+DO INSTEAD NOTHING;
